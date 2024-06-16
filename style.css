@@ -1,0 +1,308 @@
+/* --------------------- */
+/* CSS RESET  */
+/* --------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+
+img {
+    max-inline-size: 100%;
+
+}
+
+
+button {
+    padding-inline: 0;
+    padding-block: 0;
+    margin-inline: 0;
+    border: 0px;
+
+}
+
+/* --------------------- */
+/* Font-Families  */
+/* --------------------- */
+@font-face {
+    font-family: Montserrat;
+    src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url("/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+
+/* --------------------- */
+/* Custom Properties */
+/* --------------------- */
+
+:root {
+    /* colors  */
+    --clr-dark-cyan: 158, 36%, 37%;
+    --clr-cream: 30, 38%, 92%;
+    --clr-dark-blue: 212, 21%, 14%;
+    --clr-grayish-blue: 228, 12%, 48%;
+    --clr-white: 0, 0%, 100%;
+
+    /* font families */
+
+    --ff-montserrat: Montserrat;
+    --ff-fraunces: Fraunces;
+
+
+
+    /* Typograph  */
+    --fs-200: .75rem;
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.625rem;
+}
+
+
+
+/* --------------------- */
+/* Utlity Classes */
+/* --------------------- */
+
+
+/* Background  */
+.bg-dark-cyan {
+    background-color: hsl(var(--clr-dark-cyan));
+}
+
+
+.bg-cream {
+    background-color: hsl(var(--clr-cream));
+}
+
+.bg-dark-blue {
+    background-color: hsl(var(--clr-dark-blue));
+}
+
+.bg-grayish-blue {
+    background-color: hsl(var(--clr-grayish-blue));
+}
+
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
+
+
+/* Text Color  */
+
+.text-dark-cyan {
+    color: hsl(var(--clr-dark-cyan));
+}
+
+
+.text-cream {
+    color: hsl(var(--clr-cream));
+}
+
+.text-dark-blue {
+    color: hsl(var(--clr-dark-blue));
+}
+
+.text-grayish-blue {
+    color: hsl(var(--clr-grayish-blue));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+
+/* Font families  */
+.ff-montserrat {
+    font-family: var(--ff-montserrat);
+}
+
+.ff-fraunces {
+    font-family: var(--ff-fraunces);
+}
+
+
+
+/* Typograph  */
+
+
+.fs-200 {
+    font-size: var(--fs-200);
+}
+
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+
+/* Font Weight  */
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.spacing-1 {
+    letter-spacing: 4px;
+}
+
+
+
+.flow > * {
+    margin-bottom: 1em;
+}
+
+/* --------------------- */
+/* Custom */
+/* --------------------- */
+
+body {
+    height: 100vh;
+    font-family: var(--ff-montserrat);
+    display: grid;
+    padding : 2em 1em;
+}
+
+/* --------------------- */
+/* Components */
+/* --------------------- */
+
+
+/* Card */
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5em;
+    /* height: calc(100vh - 4rem); */
+}
+
+
+.product-img {
+    height: 15.625em;
+    border-radius: .5em .5em 0 0;
+    overflow: hidden;
+
+}
+
+
+
+.product-img>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom 100px;
+}
+
+
+.product-detail {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+}
+
+.product-price span:nth-child(1) {
+    margin-right: .5em;
+}
+
+.product-price span:nth-child(2) {
+    text-decoration: line-through;
+}
+
+/* Button  */
+
+.add-cart-btn {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 1rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+
+.add-cart-btn:hover {
+    cursor: pointer;
+    background-color: hsl(var(--clr-dark-blue));
+}
+
+
+
+@media only screen and (min-width : 35em) {
+
+    body{
+        display: grid;
+        place-content: center;
+    }
+    .product-card {
+        height: 100%;
+        max-width: 43.75rem;
+        min-width: 37.5rem;
+        flex-direction: row;
+    }
+
+    .product-img {
+        flex : 1;
+        height: 100%;
+        border-radius: .5em 0 0 .5em;
+        -webkit-border-radius: .5em 0 0 .5em;
+        -moz-border-radius: .5em 0 0 .5em;
+        -ms-border-radius: .5em 0 0 .5em;
+        -o-border-radius: .5em 0 0 .5em;
+    }
+    .product-detail{
+        flex : 1;
+        justify-content: space-around;
+    }
+}
