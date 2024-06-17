@@ -32,13 +32,14 @@ button {
 /* --------------------- */
 @font-face {
     font-family: Montserrat;
-    src: url("fonts/Montserrat/static/Montserrat-Regular.ttf");
+    src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format('truetype');
+
 
 }
 
 @font-face {
     font-family: Fraunces;
-    src: url("fonts/Fraunces/static/Fraunces_9pt_Soft-Regular.ttf");
+    src: url("fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf") format('truetype');
 }
 
 
